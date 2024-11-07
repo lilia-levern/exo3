@@ -1,20 +1,46 @@
-from math import sqrt
+"""
+This module
+"""
 
-#### Fonction secondaire
 
 
 def isprime(p):
+    """
+    this function takes an int and returns True if it is prime
 
-    # votre code ici
+    Args:
+        p: int
+    Returns:
+        boolean
+    """
+    premier=True
+    if p in (0,1):
+        premier=False
 
-    pass
+    for d in range(2,p):
+        if p%d==0:
+            premier=False
+            break
+    return premier
+
+
+
+
+
 
 #### Fonction principale
 
 
 def main():
 
-    # vos appels à la fonction secondaire ici
+    """
+    description renvoyée
+
+    """
+
+    is_five_prime = isprime(5)
+
+    print(is_five_prime)
 
     for n in range(100):
         if isprime(n):
